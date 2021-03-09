@@ -52,3 +52,13 @@ form {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+#data{
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: auto ;
+  margin: 40px auto 0px auto;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
