@@ -9,7 +9,24 @@
         <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
     </head>       
     <body>
-        <div>
+        <div id="pop-up">
+            <div>
+                <img id="titleIcon" src="mainLogo.PNG">
+                <h1 id="title">Helping Hands</h1>
+            </div>
+            <form>
+                <div id ="div">
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email">
+                    <br><br>
+                    <label for="pwd" id="lab">Password:</label>
+                    <input type="password" id="pwd" name="pwd">
+                    <br><br>
+                    <button type="submit" id="btn">Login</button>
+                </div>
+            </form>  
+        </div>
+        <!-- <div>
             <img id="titleIcon" src="mainLogo.PNG">
             <h1 id="title">Helping Hands</h1>
         </div>
@@ -23,6 +40,6 @@
                 <br><br>
                 <button type="submit" id="btn">Login</button>
             </div>
-        </form>       
+        </form>        -->
     </body>
 </html>

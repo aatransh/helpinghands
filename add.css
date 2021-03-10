@@ -52,3 +52,13 @@ form {
     padding-left: 10%;
     padding-right: 10%;
 }
+#pop-up{
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
