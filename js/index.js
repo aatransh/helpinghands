@@ -9,30 +9,40 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
   firebase.auth.Auth.Persistence.LOCAL;
 
-  $("#btn").click(function()
-  {
-    var email = $("#email").val();
-    var password = $("#pwd").val();
+  function login(){
+    let userEmail=document.querySelector("#email").value;
+    let userPassword=document.querySelector("#pwd").value;
 
-    if(email!="" && password!="")
-    {
-        var result=firebase.auth().signInWithEmailAndPassword(email,password);
-        result.catch(function(error)
-        {
-          var errorCode=error.code;
-          var errorMessage=error.message;
-               
-          console.log(errorCode);
-          console.log(errorMessage);
-          window.alert("Message :" + errorMessage);
-        });
-    }
-    else
-    {
-      window.alert("Please fill complete Data");
-    }
+    if(userEmail==="admin@helpinghands.com"&&userPassword==="admin@21"){
+      firebase.auth().signInWithEmailAndPassword(userEmail,userPassword)
+      .then((userCredential) => {
+    // Signed in 
+      //var user = userCredential.user;
+      window.location.href="LandingPage.html";
+      //alert("Signed In successfully...Hare Krishna");
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(errorMessage);
+    // ..
   });
+    }
+    else if(userEmail==="")
+      alert("Please fill the Email");
+    
+    else if(userPassword==="")
+      alert("Please fill the Password");
+
+    else if(userEmail!="admin@helpinghands.com")
+      alert("Admin Email is invalid");
+    
+    else if(userPassword!="admin@21")
+      alert("Admin Password is invalid");
+  }
+
+  document.querySelector("#submit").onclick=login;
