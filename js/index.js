@@ -10,7 +10,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-  firebase.auth.Auth.Persistence.LOCAL;
+  //firebase.auth.Auth.Persistence.LOCAL;
 
   function login(){
     let userEmail=document.querySelector("#email").value;
