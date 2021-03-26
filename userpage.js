@@ -11,22 +11,46 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   let database=firebase.firestore();
-  // let list=document.querySelector("#testList");
-  let list=document.querySelector(".list_of_users");
+  let tableBody=document.querySelector("#tableBody");
 
   database.collection("users").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        // // console.log(`${doc.data().name}`);
-        // var name=doc.data().name;
-        // const li = document.createElement('li');
-        // li.innerHTML = name;
-        // list.appendChild(li);
         var data=doc.data();
+        var image=data.image;
         var name=data.name;
-        const li=document.createElement('li');
-        li.setAttribute("class","users_data");
-        li.innerHTML=name;
-        list.appendChild(li);
-       });
+        var email=data.email;
+        var contact=data.contact;
+        var address=data.address;
+
+        if(email===undefined)
+         email="-"
+        if(address===undefined)
+         address="-"
+
+        const tr=document.createElement('tr');
+        const nametd=document.createElement('td');
+        const mailtd=document.createElement('td');
+        const phonetd=document.createElement('td');
+        const addtd=document.createElement('td');
+        const ispan=document.createElement('span');
+        const imag =document.createElement('img');
+        
+        imag.setAttribute("src","cap1.PNG");
+        //imag.src=image;
+        imag.setAttribute("class","userImg");
+        
+        ispan.appendChild(imag);
+        nametd.appendChild(ispan);
+        nametd.innerHTML=name;
+        mailtd.innerHTML=email;
+        phonetd.innerHTML=contact;
+        addtd.innerHTML=address;
+        tr.appendChild(nametd);
+        tr.appendChild(addtd);
+        tr.appendChild(mailtd);
+        tr.appendChild(phonetd);
+
+        tableBody.appendChild(tr);
+    });
 });
 
