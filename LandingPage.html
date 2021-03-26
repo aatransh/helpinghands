@@ -6,43 +6,48 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <button name="LogOut" id="logout">Logout</button>
         <div>
             <img id="titleIcon" src="mainLogo.PNG">
             <h1 id="title">Helping Hands</h1>
         </div>
-        <div class="blocks">
-            <div>100</div>
-            <div>101</div>
-            <div>102</div>
-         </div>
-        <div class="blocks">
-          <div>Users</div>
-          <div>Daily Traffic</div>
-          <div>Bookings</div>
-       </div>
+        <div class="row">
+            <div class="column">
+              <div class="card1">100</div>
+              <div class="card1">Users</div>
+            </div>
+            <div class="column">
+                <div class="card1">101</div>
+                <div class="card1">Daily Traffic</div>
+            </div>
+            <div class="column">
+                <div class="card1">102</div>
+                <div class="card1">Bookings</div>
+            </div>
+        </div>
 
        <div id="data">
         <div id = "blocks_2">
           <div >
-            <img id = "block_img" src="users.jpg"> 
-            Users
+            <a href="UserPage.html"><img id = "block_img" src="users.jpg"> 
+            Users</a>
           </div>
           <div >
-            <img id = "block_img" src="Bookings.jpg"> 
-            Services
+            <a href="ServicePage.html"><img id = "block_img" src="Bookings.jpg"> 
+            Services</a>
           </div>
         </div>
         <div id = "blocks_2">
           <div >
-            <img id = "block_img" src="Workers.jpg"> 
-            Workers
+            <a href="WorkerPage.html"><img id = "block_img" src="Workers.jpg"> 
+            Workers</a>
           </div>
           <div >
-            <img id = "block_img" src="categories.jpg"> 
-            Categories
+            <a href="CategoryPage.html"><img id = "block_img" src="categories.jpg"> 
+            Categories</a>
           </div>
         </div>
-        <button name="LogOut" id="logout">Logout</button>
+        
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
