@@ -15,7 +15,7 @@ var firebaseConfig = {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
-      alert("Your have successfully logged in!!")
+      // alert("Your have successfully logged in!!")
       // ...
     } else {
       // User is signed out
