@@ -29,7 +29,7 @@ var firebaseConfig = {
 
   function signout(){
       firebase.auth().signOut();
-      window.location.href="signin.html";
-      alert("user signed out")
+      window.location.href="index.html";
+//       alert("user signed out")
       
   }
