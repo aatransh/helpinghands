@@ -91,3 +91,11 @@
   margin-left: auto;
   margin-right: 25px;
 }
+#Progress{
+  
+  position: absolute;
+  display: block;
+  bottom: 30px;
+  margin-left: 600px;
+  visibility: hidden;
+}

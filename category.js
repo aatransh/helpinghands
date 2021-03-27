@@ -34,5 +34,7 @@ var firebaseConfig = {
           tr.appendChild(nametd);
           tableBody.appendChild(tr);
       });
+      
+    document.querySelector(".bar").style.visibility = "hidden";
+});
 
-  });

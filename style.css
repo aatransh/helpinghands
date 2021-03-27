@@ -223,6 +223,12 @@ tr td:first-child{
 	display: flex;
 	align-items: center;
 } 
+.bar{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	/* visibility: hidden; */
+}
 
 
 

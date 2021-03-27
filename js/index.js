@@ -17,6 +17,7 @@ firebase.initializeApp(firebaseConfig);
     let userPassword=document.querySelector("#pwd").value;
 
     if(userEmail==="admin@helpinghands.com"&&userPassword==="admin@21"){
+      document.getElementById("Progress").style.visibility = "visible";
       firebase.auth().signInWithEmailAndPassword(userEmail,userPassword)
       .then((userCredential) => {
     // Signed in 
@@ -26,6 +27,7 @@ firebase.initializeApp(firebaseConfig);
     // ...
   })
   .catch((error) => {
+    document.getElementById("Progress").style.visibility = "hidden";
     var errorCode = error.code;
     var errorMessage = error.message;
     alert(errorMessage);

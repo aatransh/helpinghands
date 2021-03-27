@@ -52,5 +52,6 @@ var firebaseConfig = {
 
         tableBody.appendChild(tr);
     });
+    document.querySelector(".bar").style.visibility = "hidden";
 });
 
