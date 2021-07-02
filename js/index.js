@@ -18,7 +18,7 @@ firebase.initializeApp(firebaseConfig);
 
     if(userEmail==="admin@helpinghands.com"&&userPassword==="admin@21"){
       document.getElementById("Progress").style.visibility = "visible";
-      firebase.auth().signInWithEmailAndPassword(userEmail,userPassword)
+      firebase.auth().createUserWithEmailAndPassword(userEmail,userPassword)
       .then((userCredential) => {
     // Signed in 
       //var user = userCredential.user;
